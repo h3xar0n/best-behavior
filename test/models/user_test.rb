@@ -47,6 +47,9 @@ class UserTest < ActiveSupport::TestCase
                             user_at_foo.org 
                             user@example.
                             foo@bar_baz.com ]
-    assert_not @user.valid?
+    invalid_addresses.each do |invalid_addresses|
+      @user.email = invalid_addresses
+      assert_not @user.valid?
+    end
   end
 end
