@@ -38,7 +38,7 @@ class UserTest < ActiveSupport::TestCase
                           alice+bob@aron.cn ]
     valid_addresses.each do |valid_addresses|
       @user.email = valid_addresses
-      assert @user.valid?
+      assert @user.valid?, "Address #{valid_addresses.inspect} should be valid."
     end
   end
 
@@ -49,7 +49,8 @@ class UserTest < ActiveSupport::TestCase
                             foo@bar_baz.com ]
     invalid_addresses.each do |invalid_addresses|
       @user.email = invalid_addresses
-      assert_not @user.valid?
+      assert_not @user.valid?, 
+        "Address #{invalid_addresses.inspect} should be invalid."
     end
   end
 end
