@@ -6,7 +6,7 @@
 $gray-medium-light: #eaeaea;
 $charcoal: #36454f;
 $soviet-red: #bc5854; 
-$soviet-gold: #edd3bb; 
+$off-white: #edebe6; 
 $soviet-yellow: #fbbb51;
 
 @mixin box_sizing {
@@ -20,7 +20,7 @@ $soviet-yellow: #fbbb51;
 body {
   padding-top: 60px;
   color: $soviet-red;
-  background: $soviet-gold;
+  background: $off-white;
 }
 
 section {
